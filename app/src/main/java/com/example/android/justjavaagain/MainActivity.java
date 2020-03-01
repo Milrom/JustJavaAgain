@@ -22,9 +22,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void displayPrice(int i){
-        TextView priceTextView = findViewById(R.id.price_text_view);
-        priceTextView.setText("$" + i);
+    private int calculatePrice(){
+        return numberOfCoffees * 5;
+    }
+
+    private String createOrderSummary(){
+        return "Total: " + "$" + calculatePrice() + "\n" + "Thank you!";
     }
 
     public void increment(View view) {
@@ -41,14 +44,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void orderSubmit(View view) {
-        String priceMessage = "Total: " + "$" + numberOfCoffees * 5;
-        priceMessage = priceMessage + "\n" + "Thank you!";
-        displayMessage(priceMessage);
+        displayMessage(createOrderSummary());
     }
 
     private void displayMessage(String priceMessage) {
-        TextView priceTextView = findViewById(R.id.price_text_view);
-        priceTextView.setText(priceMessage);
+        TextView orderSummaryTextView = findViewById(R.id.orderSummary_text_view);
+        orderSummaryTextView.setText("Name: Ryan Allen \n" + "Quantity: " + numberOfCoffees + "\n"
+                + priceMessage);
     }
 
 

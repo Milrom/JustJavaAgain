@@ -45,10 +45,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="PRICE" />
+        android:text="ORDER SUMMARY" />
 
     <TextView
-        android:id="@+id/price_text_view"
+        android:id="@+id/orderSummary_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
